@@ -45,8 +45,9 @@ const Room = () => {
                 <div>Message: {message.message}</div>
                 <div>
                   {message.displayName} -{" "}
-                  {message.createdAt &&
-                    message.createdAt.toDate().toLocaleString().toString()}
+                  {new Date(message.createdAt?.seconds * 1000)
+                    .toLocaleString()
+                    .toString()}
                 </div>
               </div>
             ))}

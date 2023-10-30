@@ -15,7 +15,7 @@ type MessageContextType = {
   messages: Array<{
     id: string
     message: string
-    createdAt: Date
+    createdAt: any
     displayName: string
   }>
   sendMessage: (message: string, displayName: string) => Promise<void>
